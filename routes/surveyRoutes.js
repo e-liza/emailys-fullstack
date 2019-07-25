@@ -11,6 +11,10 @@ const Survey = mongoose.model('surveys');
 sgMail.setApiKey(keys.sendGridKey);
 
 module.exports = app => {
+  app.get('/api/surveys/thankyou', (req, res) => {
+    res.send('Thank you for voting');
+  });
+ 
   app.post(
     '/api/surveys',
     requireLogin,

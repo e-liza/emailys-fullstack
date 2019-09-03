@@ -51,6 +51,9 @@ class SurveyForm extends Component {
 
 function validate(values) {
   const errors = {};
+  errors.recipients = validateEmails(
+    values.recipients || ''
+  );
 }
 
 export default reduxForm({

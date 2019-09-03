@@ -24,7 +24,15 @@ class SurveyForm extends Component {
   render() {
     return (
       <div>
-        <form>{this.renderFields()}</form>
+        <form>
+          {this.renderFields()}
+          <Link
+            to="/surveys"
+            className="red btn-flat white-text"
+          >
+            Cancel
+          </Link>
+        </form>
       </div>
     );
   }

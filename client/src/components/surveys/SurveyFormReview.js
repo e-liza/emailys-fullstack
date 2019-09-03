@@ -6,7 +6,12 @@ import formFields from './formFields';
 import { withRouter } from 'react-router-dom';
 import * as actions from '../../actions';
 
-const SurveyFormReview = () => {
+const SurveyFormReview = ({
+  onCancel,
+  formValues,
+  submitSurvey,
+  history
+}) => {
   const reviewFields = () => {};
 
   return;

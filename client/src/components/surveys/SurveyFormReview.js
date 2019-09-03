@@ -34,6 +34,13 @@ const SurveyFormReview = ({
       >
         Back
       </button>
+      <button
+        onClick={() => submitSurvey(formValues, history)}
+        className="green btn-flat right white-text"
+      >
+        Send Survey
+        <i className="material-icons right">email</i>
+      </button>
     </div>
   );
 };

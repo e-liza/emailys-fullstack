@@ -54,6 +54,11 @@ function validate(values) {
   errors.recipients = validateEmails(
     values.recipients || ''
   );
+  _.each(formFields, ({ name }) => {
+    if (!values[name]) {
+      errors[name] = 'You must provide a value';
+    }
+  });
 }
 
 export default reduxForm({

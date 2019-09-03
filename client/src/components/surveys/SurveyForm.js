@@ -59,6 +59,7 @@ function validate(values) {
       errors[name] = 'You must provide a value';
     }
   });
+  return errors;
 }
 
 export default reduxForm({

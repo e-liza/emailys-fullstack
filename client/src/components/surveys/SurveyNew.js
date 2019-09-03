@@ -4,21 +4,21 @@ import SurveyForm from './SurveyForm';
 import SurveyFormReview from './SurveyFormReview';
 
 class SurveyNew extends Component {
-    state = { showFormReview: false };
-  
-    renderContent() {
-    
+  state = { showFormReview: false };
+
+  renderContent() {
+    if (this.state.showFormReview) {
+      return <SurveyFormReview />;
     }
-  
-    render() {
-      return (
-        <div>
-          {this.renderContent()}
-        </div>
-      );
-    }
+
+    return <SurveyForm />;
   }
-  
-  export default reduxForm({
-    form: 'surveyForm'
-  })(SurveyNew);
+
+  render() {
+    return <div>{this.renderContent()}</div>;
+  }
+}
+
+export default reduxForm({
+  form: 'surveyForm'
+})(SurveyNew);

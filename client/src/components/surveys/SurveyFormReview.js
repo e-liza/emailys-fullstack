@@ -24,7 +24,12 @@ const SurveyFormReview = ({
     }
   );
 
-  return;
+  return (
+    <div>
+      <h5>Please confirm your entries</h5>
+      {reviewFields}
+    </div>
+  );
 };
 
 function mapStateToProps(state) {

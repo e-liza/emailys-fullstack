@@ -22,7 +22,11 @@ class SurveyForm extends Component {
   }
 
   render() {
-    return;
+    return (
+      <div>
+        <form>{this.renderFields()}</form>
+      </div>
+    );
   }
 }
 

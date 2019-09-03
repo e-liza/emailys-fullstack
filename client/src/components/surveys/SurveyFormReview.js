@@ -12,4 +12,6 @@ const SurveyFormReview = () => {
   return;
 };
 
-function mapStateToProps(state) {}
+function mapStateToProps(state) {
+  return { formValues: state.form.surveyForm.values };
+}

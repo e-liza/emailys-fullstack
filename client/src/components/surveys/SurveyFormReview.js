@@ -12,7 +12,17 @@ const SurveyFormReview = ({
   submitSurvey,
   history
 }) => {
-  const reviewFields = () => {};
+  const reviewFields = _.map(
+    formFields,
+    ({ name, label }) => {
+      return (
+        <div key={name}>
+          <label>{label}</label>
+          <div>{formValues[name]}</div>
+        </div>
+      );
+    }
+  );
 
   return;
 };

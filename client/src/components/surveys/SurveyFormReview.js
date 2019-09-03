@@ -28,6 +28,12 @@ const SurveyFormReview = ({
     <div>
       <h5>Please confirm your entries</h5>
       {reviewFields}
+      <button
+        className="yellow darken-3 white-text btn-flat"
+        onClick={onCancel}
+      >
+        Back
+      </button>
     </div>
   );
 };

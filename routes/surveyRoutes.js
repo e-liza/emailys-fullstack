@@ -34,6 +34,7 @@ module.exports = app => {
       })
       .compact()
       .uniqBy('email', 'surveyId')
+      .each(({ surveyId, email, choice }) => {})
       .value();
     res.send({});
   });

@@ -1,5 +1,5 @@
 const _ = require('lodash');
-const Path = require('path-parser');
+const { Path } = require('path-parser');
 const { URL } = require('url');
 
 const mongoose = require('mongoose');
@@ -15,12 +15,13 @@ const Survey = mongoose.model('surveys');
 sgMail.setApiKey(keys.sendGridKey);
 
 module.exports = app => {
-  app.get('/api/surveys/thankyou', (req, res) => {
-    res.send('Thank you for voting');
+  app.get('/api/surveys/:surveyId/:choice', (req, res) => {
+    res.send('Thanks for voting!');
   });
 
   app.post('/api/surveys/webhooks', (req, res) => {
-    console.log(req.body);
+    const p = new Path('/api/surveys/:surveyId/:choice');
+
     res.send({});
   });
 

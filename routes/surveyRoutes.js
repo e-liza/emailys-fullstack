@@ -34,7 +34,9 @@ module.exports = app => {
       })
       .compact()
       .uniqBy('email', 'surveyId')
-      .each(({ surveyId, email, choice }) => {})
+      .each(({ surveyId, email, choice }) => {
+        Survey.updateOne();
+      })
       .value();
     res.send({});
   });

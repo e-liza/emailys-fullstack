@@ -42,7 +42,9 @@ module.exports = app => {
               $elemMatch: { email: email, responded: false }
             }
           },
-          {}
+          {
+            $inc: { [choice]: 1 }
+          }
         );
       })
       .value();

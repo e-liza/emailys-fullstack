@@ -32,6 +32,7 @@ module.exports = app => {
           };
         }
       })
+      .compact()
       .value();
     res.send({});
   });

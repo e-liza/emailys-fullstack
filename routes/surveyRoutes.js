@@ -21,6 +21,8 @@ module.exports = app => {
     async (req, res) => {
       const surveys = await Survey.find({
         _user: req.user.id
+      }).select({
+        recipients: false
       });
 
       res.send(surveys);

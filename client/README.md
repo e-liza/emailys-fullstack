@@ -1,6 +1,6 @@
 Front end for the survey creating and mailing application. Uses React and Redux.
 
-Fork, clone and run npm init from your project directory.
+Fork, clone and run npm install from your project directory.
 
 You need to add a file named .env.development with a stripe key (REACT_APP_STRIPE_KEY = stripe-key-secret).
   

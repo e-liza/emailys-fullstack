@@ -3,8 +3,14 @@ import { connect } from 'react-redux';
 import { fetchSurveys } from '../../actions';
 
 class SurveyList extends Component {
-  render() {
+  componentDidMount() {
+    this.props.fetchSurveys();
+  }
+  renderSurveys() {
     return <div />;
+  }
+  render() {
+    return <div>{this.renderSurveys()}</div>;
   }
 }
 

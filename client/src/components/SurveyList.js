@@ -7,7 +7,9 @@ class SurveyList extends Component {
     this.props.fetchSurveys();
   }
   renderSurveys() {
-    return <div />;
+    return this.props.surveys.map(survey => {
+      return <div />;
+    });
   }
   render() {
     return <div>{this.renderSurveys()}</div>;

@@ -8,7 +8,11 @@ class SurveyList extends Component {
   }
   renderSurveys() {
     return this.props.surveys.map(survey => {
-      return <div />;
+      return (
+        <div className="card darken-1" key={survey._id}>
+          <div className="card-content" />
+        </div>
+      );
     });
   }
   render() {

@@ -14,6 +14,7 @@ class SurveyList extends Component {
             <span className="card-title">
               {survey.title}
             </span>
+            <p>{survey.body}</p>
           </div>
         </div>
       );

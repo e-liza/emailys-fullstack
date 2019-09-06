@@ -16,7 +16,7 @@ class SurveyList extends Component {
             </span>
             <p>{survey.body}</p>
             <p className="right">
-              Sent On:{' '}
+              Sent On:
               {new Date(
                 survey.dateSent
               ).toLocaleDateString()}
